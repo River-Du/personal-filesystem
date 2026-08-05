@@ -52,10 +52,10 @@ personal-filesystem/
 
 克隆仓库或下载 ZIP 解压后，将整个目录结构复制到你的设备上（可以只选需要的部分），然后根据自己的习惯调整文件夹名称或增减子目录。
 
-> `.gitkeep` 是为了让 Git 保留空目录而存在的占位文件。下载后如果不需要这些占位文件，可以手动删除或在项目根目录下运行以下命令删除：
->
-> - Windows（CMD）：`for /r %f in (.gitkeep) do del "%f"`
-> - Mac / Linux：`find . -name ".gitkeep" -type f -delete`
+`.gitkeep` 是为了让 Git 保留空目录而存在的占位文件。如果下载或复制模板后不需要这些占位文件，可以运行项目根目录中的清理脚本。脚本会以自身所在目录为范围，删除该目录及其子目录中的所有 `.gitkeep` 文件。
+
+- Windows：双击 `clean_gitkeep.bat`，或在 CMD 中运行 `clean_gitkeep.bat`
+- macOS / Linux：先运行 `chmod +x clean_gitkeep.sh`，再运行 `./clean_gitkeep.sh`
 
 
 ## 使用建议
